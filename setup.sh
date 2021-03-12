@@ -6,13 +6,13 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/08 19:27:25 by plam              #+#    #+#              #
-#    Updated: 2021/03/12 11:46:21 by plam             ###   ########.fr        #
+#    Updated: 2021/03/12 12:49:23 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # minikube deployment
 minikube delete
-minikube start && minikube kubectl -- get po -A
+minikube start --vm-driver=docker && minikube kubectl -- get po -A
 kubectl create deployment hello-minikube --image=k8s.gcr.io/echoserver:1.4
 kubectl expose deployment hello-minikube --type=NodePort --port=8080
 kubectl get services hello-minikube
