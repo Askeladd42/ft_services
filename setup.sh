@@ -6,7 +6,7 @@
 #    By: plam <plam@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/08 19:27:25 by plam              #+#    #+#              #
-#    Updated: 2021/03/12 12:49:23 by plam             ###   ########.fr        #
+#    Updated: 2021/03/15 12:40:55 by plam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,5 +24,9 @@ kubectl apply -f https://raw.githubusercontent.com/google/metallb/v0.9.5/manifes
 
 # pod checking
 ## kubectl get pod -n metallb-system -o wide
+
+# ConfigMap installation
+kubectl apply -f srcs/config/metallb.yaml
+
 
 #ConfigMap
